@@ -1,0 +1,44 @@
+﻿@model TransactionMVC.Models.TransactionModel
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <h4 style="font-weight: 700;">@Model.Title</h4>
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            Category Id
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Id)
+        </dd>
+
+        <dt>
+            Category Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Title)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+</p>

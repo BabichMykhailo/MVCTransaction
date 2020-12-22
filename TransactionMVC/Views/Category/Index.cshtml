@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TransactionMVC.Models.CategoryModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    foreach (var category in Model)
+    {
+        Html.RenderPartial("/Views/Category/_CategoryData.cshtml", category);
+    }
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<p>
+    @Html.ActionLink("Create a category", "Create")
+</p>
+

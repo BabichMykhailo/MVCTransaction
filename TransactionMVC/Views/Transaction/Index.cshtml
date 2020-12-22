@@ -1,0 +1,20 @@
+﻿@model IEnumerable<TransactionMVC.Models.TransactionModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transactions</h2>
+
+@{
+    foreach (var transaction in Model)
+    {
+        Html.RenderPartial("/Views/Transaction/_TransactionData.cshtml", transaction);
+    }
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<p>
+    @Html.ActionLink("Create a transaction", "Create")
+</p>
