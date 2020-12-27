@@ -12,7 +12,7 @@ namespace DAL
     {
         public TransactionMVCContext() : base("name = DefaultConnection")
         {
-            Database.SetInitializer(new TransactionMVCInitializer());
+            //Database.SetInitializer(new TransactionMVCInitializer());
             //new TransactionMVCInitializer().Initialize(this);
         }
 

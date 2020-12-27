@@ -1,0 +1,15 @@
+﻿<h1>Statistics</h1>
+
+<div class="input-group">
+    <span></span>
+    <input id="autocomplete-report" type="text" class="form-control" placeholder="Choose category" aria-describedby="basic-addon1" category-id="1" />
+</div>
+<br />
+<button onclick="renderChart()" type="button" class="btn btn-primary">Generate report</button>
+
+<canvas id="chartReport" width="400" height="400"></canvas>
+
+@section scripts{
+    @Styles.Render("~/Content/report")
+    @Scripts.Render("~/bundles/report")
+}
